@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "https://jamesbeeprog.github.io/cpwd-website"
+base_url = "https://assabet-cpwd.github.io/"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
