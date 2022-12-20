@@ -2,11 +2,12 @@
 <title>Computer Programming and Web Development</title>
 {% endblock %} {% block content %}
 
-<div class="banner"></div>
-
-<div class="container">
+<div class="banner">
     <h1 class="title">Computer Programming and Web Development</h1>
     <h3>Assabet Valley Regional Technical High School</h3>
+</div>
+
+<main>
     <p>
         <a href="{{ get_url(path='@/projects/_index.md') }}"
             >Click here to see the projects.</a
@@ -17,5 +18,5 @@
             >GitHub</a
         >
     </p>
-</div>
+</main>
 {% endblock content %}
