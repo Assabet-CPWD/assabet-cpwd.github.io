@@ -2,6 +2,7 @@
 
 {% block head %}
     <title>{{ page.title }} | CPWD</title>
+    <link rel="stylesheet" href="/projects-page.css" />
 {% endblock %}
 
 {% block content %}
@@ -12,7 +13,7 @@
         <dl>
         {% for key, pageTerms in page.taxonomies %}
             {% set taxonomy = get_taxonomy(kind=key) %}
-            <dt><a href="{{ taxonomy.permalink }}">{{ key | title }}</a></dt>
+            <dt><h3><a href="{{ taxonomy.permalink }}">{{ key | title }}</a></h3></dt>
             <dd>
                 {% for term in taxonomy.items %}
                     {% if pageTerms is containing(term.name) %}
@@ -20,7 +21,6 @@
                     {% endif %}
                 {% endfor %}
             </dd>
-            <br>
         {% endfor %}
         </dl>
         <br>
