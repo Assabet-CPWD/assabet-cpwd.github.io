@@ -1,6 +1,16 @@
-{% extends "base.html" %} {% block content %}
-<h1 class="title">Assabet CPWD Website</h1>
-<p>
-    <a href="{{ get_url(path='@/projects/_index.md') }}">Click here to see the projects.</a>
-</p>
+{% extends "base.html" %}
+
+{% block head %}
+    <title>Computer Programming and Web Development</title>
+{% endblock %}
+
+{% block content %}
+    <h1 class="title">Computer Programming and Web Development</h1>
+    <h3>Assabet Valley Regional Technical High School</h3>
+    <p>
+        <a href="{{ get_url(path='@/projects/_index.md') }}">Click here to see the projects.</a>
+    </p>
+    <p>
+        <a href="https://github.com/Assabet-CPWD/assabet-cpwd.github.io">GitHub</a>
+    </p>
 {% endblock content %}

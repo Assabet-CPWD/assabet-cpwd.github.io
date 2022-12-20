@@ -1,6 +1,12 @@
 {% extends "base.html" %}
+
+{% block head %}
+    <title>{{ taxonomy.name | title }} | CPWD</title>
+{% endblock %}
+
 {% block content %}
     <h1 class="title">{{ taxonomy.name | title }}</h1>
+    <br>
     <ul>
     {% for term in terms %}
         <li><a href="{{ term.permalink }}">{{ term.name }}</a></li>
