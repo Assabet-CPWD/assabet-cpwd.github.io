@@ -9,7 +9,6 @@
 
 nav {
     display: flex;
-    width: 100vw;
     padding: 0.5rem;
     gap: 0.5rem;
     background-color: black;
@@ -28,8 +27,18 @@ nav {
     }
 }
 
-.section {
+.banner {
+    background: url("https://99designs-blog.imgix.net/blog/wp-content/uploads/2018/12/Gradient_builder_2.jpg?auto=format&q=60&w=1815&h=1200&fit=crop&crop=faces");
+    height: 20rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     padding: 1rem;
-    width: 25vw;
-    margin: auto;
+    gap: 1rem;
 }
