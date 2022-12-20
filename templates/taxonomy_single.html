@@ -1,18 +1,17 @@
-{% extends "base.html" %}
-
-{% block head %}
-    <title>{{ term.name | title }} | CPWD</title>
-    <meta property="og:title" content="{{ term.name | title }}" />
-{% endblock %}
-
-{% block content %}
-    <main>
-        <h1 class="title">{{ term.name }}</h1>
-        <br>
-        <ul>
+{% extends "base.html" %} {% block head %}
+<link rel="stylesheet" href="/projects.css" />
+<title>{{ term.name | title }} | CPWD</title>
+<meta property="og:title" content="{{ term.name | title }}" />
+{% endblock %} {% block content %}
+<main>
+    <h1 class="title">{{ term.name }}</h1>
+    <div class="container">
         {% for page in term.pages %}
-            <li><a href="{{ page.permalink }}">{{ page.title }}</a></li>
+        <a class="project" href="{{ page.permalink }}">
+            <div class="thumbnail"></div>
+            <p>{{ page.title }}</p>
+        </a>
         {% endfor %}
-        </ul>
-    </main>
+    </div>
+</main>
 {% endblock content %}
