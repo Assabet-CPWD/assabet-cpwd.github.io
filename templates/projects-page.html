@@ -1,4 +1,9 @@
 {% extends "base.html" %}
+
+{% block head %}
+    <title>{{ page.title }} | CPWD</title>
+{% endblock %}
+
 {% block content %}
     <h1 class="title">{{ page.title }}</h1>
     <p class="subtitle"><strong>{{ page.date }}</strong></p>
