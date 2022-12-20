@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/default.css" />
+        <link rel="stylesheet" href="/global.css" />
         <meta property="og:site_name" content="Assabet CPWD" />
         {% block head %} {% endblock %}
     </head>
@@ -12,7 +12,11 @@
         <nav>
             <a href="/">Home</a>
             <a href="{{ get_url(path='@/projects/_index.md') }}">Projects</a>
-            <a class="end" href="https://github.com/Assabet-CPWD/assabet-cpwd.github.io">GitHub</a>
+            <a
+                class="end"
+                href="https://github.com/Assabet-CPWD/assabet-cpwd.github.io"
+                >GitHub</a
+            >
         </nav>
         {% block content %} {% endblock %}
     </body>
