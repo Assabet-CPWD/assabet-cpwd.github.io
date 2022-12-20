@@ -1,8 +1,9 @@
-{% extends "base.html" %} 
+{% extends "base.html" %}
 
 {% block head %}
 <title>{{ section.title }} | CPWD</title>
-{% endblock %} 
+<meta property="og:title" content="{{ section.title }}" />
+{% endblock %}
 
 {% block content %}
 <main>
