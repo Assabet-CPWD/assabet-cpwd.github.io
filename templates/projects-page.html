@@ -2,8 +2,21 @@
 {% block content %}
     <h1 class="title">{{ page.title }}</h1>
     <p class="subtitle"><strong>{{ page.date }}</strong></p>
-    {% for key, terms in page.taxonomies %}
-        {{key}}: {{terms}}
+    <br>
+    <dl>
+    {% for key, pageTerms in page.taxonomies %}
+        {% set taxonomy = get_taxonomy(kind=key) %}
+        <dt><a href="{{ taxonomy.permalink }}">{{ key | title }}</a></dt>
+        <dd>
+            {% for term in taxonomy.items %}
+                {% if pageTerms is containing(term.name) %}
+                    <a href="{{ term.permalink }}">{{ term.name }}</a>
+                {% endif %}
+            {% endfor %}
+        </dd>
+        <br>
     {% endfor %}
+    </dl>
+    <br>
     {{ page.content | safe }}
 {% endblock content %}
