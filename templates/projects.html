@@ -1,6 +1,7 @@
 {% extends "base.html" %} {% block head %}
 <link rel="stylesheet" href="/projects.css" />
 <title>{{ section.title }} | CPWD</title>
+<meta property="og:title" content="{{ section.title }}" />
 {% endblock %} {% block content %}
 <main>
     <h1 class="title">{{ section.title }}</h1>

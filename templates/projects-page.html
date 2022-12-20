@@ -2,13 +2,17 @@
 
 {% block head %}
     <title>{{ page.title }} | CPWD</title>
+    <meta property="og:title" content="{{ page.title }}" />
     <link rel="stylesheet" href="/projects-page.css" />
 {% endblock %}
 
 {% block content %}
     <main>
-        <h1 class="title">{{ page.title }}</h1>
-        <p class="subtitle"><strong>{{ page.date }}</strong></p>
+        <h1>{{ page.title }}</h1>
+        <p>
+            Created {{ page.date | date(format="%B %e, %Y") }}<br>
+            Updated {{ page.updated | default(value=page.date) | date(format="%B %e, %Y") }}
+        </p>
         <br>
         <dl>
         {% for key, pageTerms in page.taxonomies %}
