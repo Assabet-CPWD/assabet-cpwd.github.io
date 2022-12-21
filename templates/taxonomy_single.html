@@ -1,10 +1,17 @@
-{% extends "base.html" %} {% block head %}
+{% extends "base.html" %}
+
+{% block head %}
 <link rel="stylesheet" href="/projects.css" />
 <title>{{ term.name | title }} | CPWD</title>
 <meta property="og:title" content="{{ term.name | title }}" />
-{% endblock %} {% block content %}
+{% endblock %}
+
+{% block content %}
 <main>
+    {% set url = get_url(path=taxonomy.name) %}
+    <h3><a href="{{ url }}"><-- {{ taxonomy.name | title }}</a></h3>
     <h1 class="title">{{ term.name }}</h1>
+
     <div class="container">
         {% for page in term.pages %}
         <a class="project" href="{{ page.permalink }}">
