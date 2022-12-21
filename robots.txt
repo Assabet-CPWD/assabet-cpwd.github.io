@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+Allow: /
+Sitemap: https://assabet-cpwd.github.io/sitemap.xml
